@@ -35,11 +35,11 @@ services:
       - type: bind
         source: ./logstash/config/logstash.yml
         target: /usr/share/logstash/config/logstash.yml
-        read_only: true
+        read_only: false
       - type: bind
         source: ./logstash/pipeline
         target: /usr/share/logstash/pipeline
-        read_only: true
+        read_only: false
     ports:
       - "5044:5044"
       - "5000:5000/tcp"
